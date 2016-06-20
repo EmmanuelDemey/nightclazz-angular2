@@ -8,7 +8,7 @@ testing_1.describe('App: NightClazz', function () {
         testing_1.expect(app).toBeTruthy();
     }));
     testing_1.it('should have as title \'app works!\'', testing_1.inject([app_component_1.AppComponent], function (app) {
-        testing_1.expect(app.title).toEqual('app works!');
+        testing_1.expect(app.projectName).toEqual('Hello World !');
     }));
 });
 //# sourceMappingURL=app.component.spec.js.map

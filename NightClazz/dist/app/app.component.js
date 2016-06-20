@@ -12,13 +12,13 @@ var core_1 = require('@angular/core');
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'app works!';
+        this.projectName = 'Hello World !';
     }
     AppComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'app-root',
-            templateUrl: 'app.component.html',
-            styleUrls: ['app.component.css']
+            template: '<h1>{{projectName}}</h1>'
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

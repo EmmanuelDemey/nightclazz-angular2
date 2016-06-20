@@ -18,6 +18,6 @@ describe('App: NightClazz', () => {
 
   it('should have as title \'app works!\'',
       inject([AppComponent], (app: AppComponent) => {
-    expect(app.title).toEqual('app works!');
+    expect(app.projectName).toEqual('Hello World !');
   }));
 });
