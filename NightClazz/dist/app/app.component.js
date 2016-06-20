@@ -14,11 +14,14 @@ var AppComponent = (function () {
         this.title = 'app works!';
         this.projectName = 'Hello World !';
     }
+    AppComponent.prototype.displayProjectName = function () {
+        alert(this.projectName);
+    };
     AppComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'app-root',
-            template: "\n      <h1>{{projectName}}</h1>\n      <input [(ngModel)]=\"projectName\" />\n  "
+            template: "\n      <h1>{{projectName}}</h1>\n      <input [(ngModel)]=\"projectName\" />\n      <button (click)=\"displayProjectName()\">Display Project Name</button>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
