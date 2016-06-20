@@ -13,15 +13,13 @@ var AppComponent = (function () {
     function AppComponent() {
         this.title = 'app works!';
         this.projectName = 'Hello World !';
+        this.heroes = ['Ironman', 'Le fauve'];
     }
-    AppComponent.prototype.displayProjectName = function () {
-        alert(this.projectName);
-    };
     AppComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'app-root',
-            template: "\n      <h1>{{projectName}}</h1>\n      <input [(ngModel)]=\"projectName\" />\n      <button *ngIf=\"projectName\" (click)=\"displayProjectName()\">Display Project Name</button>\n  "
+            template: "\n      <h1>{{projectName}}</h1>\n      <ul>\n        <li *ngFor=\"let hero of heroes\">{{hero}}</li>\n      </ul>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

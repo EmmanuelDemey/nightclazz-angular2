@@ -5,8 +5,9 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
       <h1>{{projectName}}</h1>
-      <input [(ngModel)]="projectName" />
-      <button *ngIf="projectName" (click)="displayProjectName()">Display Project Name</button>
+      <ul>
+        <li *ngFor="let hero of heroes">{{hero}}</li>
+      </ul>
   `
 })
 export class AppComponent {
@@ -14,7 +15,5 @@ export class AppComponent {
 
   projectName: string = 'Hello World !';
 
-  displayProjectName(){
-    alert(this.projectName);
-  }
+  heroes: string[] = ['Ironman', 'Le fauve'];
 }
