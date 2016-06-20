@@ -10,11 +10,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var hero_1 = require('./hero');
+var Observable_1 = require('rxjs/Observable');
+require('rxjs/Rx');
 var HeroService = (function () {
     function HeroService() {
     }
     HeroService.prototype.findHeroes = function () {
-        return [new hero_1.Hero('Ironman'), new hero_1.Hero('Le fauve')];
+        return Observable_1.Observable.of([new hero_1.Hero('Ironman'), new hero_1.Hero('Le fauve')]);
     };
     HeroService = __decorate([
         core_1.Injectable(), 

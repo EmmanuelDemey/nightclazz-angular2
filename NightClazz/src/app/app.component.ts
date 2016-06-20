@@ -21,6 +21,7 @@ export class AppComponent {
   heroes: Hero[];
   
   constructor(heroService:HeroService){
-    this.heroes = heroService.findHeroes();
+    heroService.findHeroes()
+    .subscribe(heroes => this.heroes = heroes);
   }
 }

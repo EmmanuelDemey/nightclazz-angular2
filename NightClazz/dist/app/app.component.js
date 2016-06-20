@@ -13,9 +13,11 @@ var shared_1 = require('./shared');
 var hero_1 = require('./hero');
 var AppComponent = (function () {
     function AppComponent(heroService) {
+        var _this = this;
         this.title = 'app works!';
         this.projectName = 'Hello World !';
-        this.heroes = heroService.findHeroes();
+        heroService.findHeroes()
+            .subscribe(function (heroes) { return _this.heroes = heroes; });
     }
     AppComponent = __decorate([
         core_1.Component({
