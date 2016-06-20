@@ -4,7 +4,7 @@ import { Component, OnInit, Input } from '@angular/core';
   moduleId: module.id,
   selector: 'hero',
   template: `
-    {{hero}}
+    {{name}}
   `,
   styleUrls: ['hero.component.css']
 })
