@@ -9,18 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var hero_1 = require('./hero');
-var Observable_1 = require('rxjs/Observable');
+var http_1 = require('@angular/http');
 require('rxjs/Rx');
 var HeroService = (function () {
-    function HeroService() {
+    function HeroService(http) {
+        this.http = http;
+        this._url = 'https://raw.githubusercontent.com/ggaulard/ggaulard.github.io/master/workshop/heroes';
     }
     HeroService.prototype.findHeroes = function () {
-        return Observable_1.Observable.of([new hero_1.Hero('Ironman'), new hero_1.Hero('Le fauve')]);
+        return this.http.get(this._url)
+            .map(function (data) { return data.json(); });
     };
     HeroService = __decorate([
         core_1.Injectable(), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [http_1.Http])
     ], HeroService);
     return HeroService;
 }());
