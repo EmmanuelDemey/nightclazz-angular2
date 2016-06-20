@@ -2,5 +2,5 @@
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(require('./hero'));
+__export(require('./hero.component'));
 //# sourceMappingURL=index.js.map

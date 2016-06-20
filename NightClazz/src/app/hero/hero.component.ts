@@ -1,17 +1,18 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {Hero} from '../shared';
 
 @Component({
   moduleId: module.id,
   selector: 'hero',
   template: `
-    {{name}}
+    {{hero.name}}
   `,
   styleUrls: ['hero.component.css']
 })
 export class HeroComponent implements OnInit {
 
   @Input()
-  name:string;
+  hero:Hero;
   
   constructor() {}
 

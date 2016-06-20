@@ -9,24 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var shared_1 = require('./shared');
-var hero_1 = require('./hero');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.title = 'app works!';
-        this.projectName = 'Hello World !';
-        this.heroes = [new shared_1.Hero('Ironman'), new shared_1.Hero('Le fauve')];
+var shared_1 = require('../shared');
+var HeroComponent = (function () {
+    function HeroComponent() {
     }
-    AppComponent = __decorate([
+    HeroComponent.prototype.ngOnInit = function () {
+    };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', shared_1.Hero)
+    ], HeroComponent.prototype, "hero", void 0);
+    HeroComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'app-root',
-            template: "\n      <h1>{{projectName}}</h1>\n      <ul>\n        <li *ngFor=\"let hero of heroes\"><hero [hero]=\"hero\"></hero></li>\n      </ul>\n  ",
-            directives: [hero_1.HeroComponent]
+            selector: 'hero',
+            template: "\n    {{hero.name}}\n  ",
+            styleUrls: ['hero.component.css']
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], HeroComponent);
+    return HeroComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.HeroComponent = HeroComponent;
+//# sourceMappingURL=hero.component.js.map
