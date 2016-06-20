@@ -21,7 +21,7 @@ var AppComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'app-root',
-            template: "\n      <h1>{{projectName}}</h1>\n      <input [(ngModel)]=\"projectName\" />\n      <button (click)=\"displayProjectName()\">Display Project Name</button>\n  "
+            template: "\n      <h1>{{projectName}}</h1>\n      <input [(ngModel)]=\"projectName\" />\n      <button *ngIf=\"projectName\" (click)=\"displayProjectName()\">Display Project Name</button>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
