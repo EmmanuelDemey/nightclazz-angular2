@@ -18,7 +18,7 @@ var AppComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'app-root',
-            template: '<h1>{{projectName}}</h1>'
+            template: "\n      <h1>{{projectName}}</h1>\n      <input [(ngModel)]=\"projectName\" />\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
