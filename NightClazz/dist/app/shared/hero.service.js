@@ -9,24 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var shared_1 = require('./shared');
 var hero_1 = require('./hero');
-var AppComponent = (function () {
-    function AppComponent(heroService) {
-        this.title = 'app works!';
-        this.projectName = 'Hello World !';
-        this.heroes = heroService.findHeroes();
+var HeroService = (function () {
+    function HeroService() {
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'app-root',
-            template: "\n      <h1>{{projectName}}</h1>\n      <ul>\n        <li *ngFor=\"let hero of heroes\"><hero [hero]=\"hero\"></hero></li>\n      </ul>\n  ",
-            directives: [hero_1.HeroComponent]
-        }), 
-        __metadata('design:paramtypes', [shared_1.HeroService])
-    ], AppComponent);
-    return AppComponent;
+    HeroService.prototype.findHeroes = function () {
+        return [new hero_1.Hero('Ironman'), new hero_1.Hero('Le fauve')];
+    };
+    HeroService = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [])
+    ], HeroService);
+    return HeroService;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.HeroService = HeroService;
+//# sourceMappingURL=hero.service.js.map

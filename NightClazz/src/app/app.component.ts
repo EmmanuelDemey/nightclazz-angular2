@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import {Hero} from './shared';
+import {Hero, HeroService} from './shared';
 import {HeroComponent} from './hero'
+
 @Component({
   moduleId: module.id,
   selector: 'app-root',
@@ -17,5 +18,9 @@ export class AppComponent {
 
   projectName: string = 'Hello World !';
 
-  heroes: Hero[] = [new Hero('Ironman'), new Hero('Le fauve')];
+  heroes: Hero[];
+  
+  constructor(heroService:HeroService){
+    this.heroes = heroService.findHeroes();
+  }
 }
