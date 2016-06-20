@@ -23,8 +23,9 @@ var AppComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'app-root',
-            template: "\n      <h1>{{projectName}}</h1>\n      <ul>\n        <li *ngFor=\"let hero of heroes\"><hero [hero]=\"hero\"></hero></li>\n      </ul>\n  ",
-            directives: [hero_1.HeroComponent]
+            template: "\n      <h1>{{projectName}}</h1>\n      <input [(ngModel)]=\"filterhero\" />\n      <ul>\n        <li *ngFor=\"let hero of (heroes | heroFilter:filterhero)\"><hero [hero]=\"hero\"></hero></li>\n      </ul>\n  ",
+            directives: [hero_1.HeroComponent],
+            pipes: [shared_1.HeroPipe]
         }), 
         __metadata('design:paramtypes', [shared_1.HeroService])
     ], AppComponent);
