@@ -5,7 +5,7 @@ import {Hero} from '../shared';
   moduleId: module.id,
   selector: 'hero',
   template: `
-    {{hero.name}}
+    {{hero.name}}<img [src]="hero.picture" />
   `,
   styleUrls: ['hero.component.css']
 })

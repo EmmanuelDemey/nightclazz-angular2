@@ -23,7 +23,7 @@ var HeroComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'hero',
-            template: "\n    {{hero.name}}\n  ",
+            template: "\n    {{hero.name}}<img [src]=\"hero.picture\" />\n  ",
             styleUrls: ['hero.component.css']
         }), 
         __metadata('design:paramtypes', [])
