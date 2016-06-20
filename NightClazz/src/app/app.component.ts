@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HeroComponent } from './hero';
 
 @Component({
   moduleId: module.id,
@@ -6,9 +7,10 @@ import { Component } from '@angular/core';
   template: `
       <h1>{{projectName}}</h1>
       <ul>
-        <li *ngFor="let hero of heroes">{{hero}}</li>
+        <li *ngFor="let hero of heroes"><hero name="hero"></hero></li>
       </ul>
-  `
+  `,
+  directives: [HeroComponent]
 })
 export class AppComponent {
   title = 'app works!';

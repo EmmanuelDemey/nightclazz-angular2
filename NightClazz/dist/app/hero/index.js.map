@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../home/emmanuel/Documents/workspace/nightclazz-angular2/NightClazz/tmp/broccoli_type_script_compiler-input_base_path-9k4xTQ5Y.tmp/0/src/app/hero/index.ts"],"names":[],"mappings":";;;;AAAA,iBAAc,kBAAkB,CAAC,EAAA","sourcesContent":["export * from './hero.component';\n"]}

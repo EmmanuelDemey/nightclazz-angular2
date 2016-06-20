@@ -9,23 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var hero_1 = require('./hero');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.title = 'app works!';
-        this.projectName = 'Hello World !';
-        this.heroes = ['Ironman', 'Le fauve'];
+var HeroComponent = (function () {
+    function HeroComponent() {
     }
-    AppComponent = __decorate([
+    HeroComponent.prototype.ngOnInit = function () {
+    };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], HeroComponent.prototype, "name", void 0);
+    HeroComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'app-root',
-            template: "\n      <h1>{{projectName}}</h1>\n      <ul>\n        <li *ngFor=\"let hero of heroes\"><hero name=\"hero\"></hero></li>\n      </ul>\n  ",
-            directives: [hero_1.HeroComponent]
+            selector: 'hero',
+            template: "\n    {{name}}\n  ",
+            styleUrls: ['hero.component.css']
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], HeroComponent);
+    return HeroComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.HeroComponent = HeroComponent;
+//# sourceMappingURL=hero.component.js.map
